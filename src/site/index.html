@@ -3,13 +3,12 @@ layout: "layouts/default.njk"
 hej: "Frontpage"
 ---
 <section class="hero">
-        <picture>
-            <source srcset="/assets/images/cases-home-1.webp?nf_resize=fit&w=320 320w, /assets/images/cases-home-1.webp?nf_resize=fit&w=480 480w, /assets/images/cases-home-1.webp?nf_resize=fit&w=800 800w", type="image/webp">
-            <source srcset="/assets/images/cases-home-1.jpg?nf_resize=fit&w=320 320w, /assets/images/cases-home-1.jpg?nf_resize=fit&w=480 480w, /assets/images/cases-home-1.jpg?nf_resize=fit&w=800 800w", type="image/jpg">
-            <img loading="lazy" class="image" src="/assets/images/service-1.jpg?nf_resize=fit&w=800 800w" sizes="(max-width: 320px) 280px,(max-width: 480px) 440px, 800px" alt="Alt Text!">
-        </picture>
-    <img srcset="/assets/images/cases-home-1.webp?nf_resize=fit&w=320 320w, /assets/images/cases-home-1.webp?nf_resize=fit&w=480 480w, /assets/images/cases-home-1.webp?nf_resize=fit&w=800 800w", 
-             sizes="(max-width: 320px) 280px,(max-width: 480px) 440px, 800px"
+    <img srcset="/assets/images/cases-home-1.jpg?nf_resize=fit&w=320 320w,
+             /assets/images/cases-home-1.jpg?nf_resize=fit&w=480 480w,
+             /assets/images/cases-home-1.jpg?nf_resize=fit&w=800 800w"
+      sizes="(max-width: 320px) 280px,
+             (max-width: 480px) 440px,
+             800px"
         src="/assets/images/cases-home-1.jpg?nf_resize=fit&w=800" alt="Elva dressed as a fairy">
         <div class="hero__top">
             <div class="container container--right">
