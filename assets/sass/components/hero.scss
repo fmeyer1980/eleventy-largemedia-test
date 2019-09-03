@@ -1,0 +1,220 @@
+$video-offset: 35rem;
+
+.hero{
+
+    &__top{
+        position: relative;
+        color: $black;
+        width: 100%;
+        background-color: $primary;
+
+            .video-wrapper{
+            position: relative;
+            margin-bottom: -$video-offset;
+            padding-top: calc(451.44 / 1127.34 * 100%);
+            overflow: hidden;
+            margin-left: var(--container-padding);
+            z-index: 3;
+            animation: FadeInUp .3s ease;
+            animation-delay: 1.5s;
+            animation-fill-mode: backwards;
+            z-index: 10;
+            
+            &:after{
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background-color: $primary;
+                z-index: 1;
+                mix-blend-mode: color;
+                opacity: .5;
+            }
+
+            video{
+                position: absolute;
+                top: 50%;
+                bottom: 0;
+                width: 100%;
+                transform: translateY(-50%);
+                
+            }
+            
+        }
+
+        /* &:after{
+            content:"";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to bottom right, $primary, $secondary);
+            animation: FadeIn .3s ease-in;
+            animation-delay: 1.6s;
+            animation-fill-mode: backwards;
+        } */
+
+         &:after{
+            content:"";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: calc(100% - #{$video-offset});
+            background: url('/assets/images/hero-indexed-icon.svg') no-repeat;
+            background-position: right $header-height;
+            background-size: auto calc(100% - 10rem);
+            animation: FadeIn .3s ease-in;
+            animation-delay: 1.6s;
+            animation-fill-mode: backwards;
+            z-index: 2;
+        }
+        &:before{
+            content:"";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: calc(100% - #{$video-offset});
+            background-image: url('/assets/images/hero-bg.webp');
+            background-position: top center;
+            background-size: cover;
+            animation: FadeInLight .3s ease-in;
+            animation-delay: 1.6s;
+            animation-fill-mode: backwards;
+            z-index: 1;
+            opacity: .05;
+            mix-blend-mode: multiply;
+        }
+
+
+        .container{
+            position: relative;
+            z-index: 3;
+            padding-right: var(--container-padding);
+            padding-top: 25rem;
+            padding-bottom: 5rem;
+        }
+
+
+        &__content{
+
+            .text{
+                margin-left: 5rem;
+
+                h1{
+                    font-size: 6rem;
+                    margin-top: 0;
+                    margin-bottom: .2em;
+                    display: inline-block;
+                    line-height: 0;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    
+
+                    .heading{
+                        animation: heroHeadingAni 1.4s forwards;
+                        animation-delay: .3s;
+                        animation-fill-mode: backwards;
+                        overflow: hidden;
+                        display: block;
+                        position: relative;
+                        line-height: 1.1em;
+                        margin-bottom: 0em;
+                        &:last-child{
+                            animation-delay: .5s;
+                            .ani{
+                                animation-delay: .5s;
+                            }
+                        }
+
+                        .ani{
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            top: .1em;
+                            left: 0;
+                            z-index: 1;
+                            animation: slideInFromLeft .8s;
+                            animation-fill-mode: backwards;
+                            animation-delay: .3s;
+                        }
+                    }
+
+                    
+                }
+                p{
+                    font-size: 2.2rem;
+                    margin: 0;
+                    font-weight: 400;
+                    animation: FadeIn .3s ease;
+                    animation-delay: 2.1s;
+                    animation-fill-mode: backwards;
+                    margin-bottom: 2em;
+                    opacity: .8;
+                    width: 80rem;
+                    max-width: 100%;
+                }
+
+                a{
+                    animation: FadeIn .3s ease;
+                    animation-delay: 2.1s;
+                    animation-fill-mode: backwards;
+                    color: #FA8027;
+                }
+            }
+        }
+    }
+
+    &__bottom{
+        background-color: $light-gray-dark;
+        padding-top: $video-offset;
+        padding-bottom: 7rem;
+        animation: FadeIn .3s ease-in;
+        animation-delay: 1.6s;
+        animation-fill-mode: backwards;
+        position: relative;
+  
+
+        .icons-wrapper{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 var(--container-padding);
+            padding-top: 7rem;
+            list-style: none;
+            margin: 0;
+
+            li{
+                position: relative;
+                padding: 0 5rem;
+                &:after{
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    content: "";
+                    width: 1px;
+                    height: 100%;
+                    background-color: $black;
+                    opacity: .05;
+                    margin-left: 3rem;
+                    transform: translateY(-50%);
+                }
+                &:last-child:after{
+                    display: none;
+                }
+            }
+
+            img{
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+        }
+    }
+
+
+}

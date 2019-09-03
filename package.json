@@ -1,0 +1,20 @@
+{
+  "name": "secret-sin-ny",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@11ty/eleventy": "^0.8.3",
+    "node-sass": "^4.12.0",
+    "swup": "^2.0.5",
+    "typeface-roboto": "^0.0.54"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "compile:sass": "node-sass assets/sass/styles.scss assets/css/styles.css -w",
+    "start": "eleventy --serve --watch",
+    "build": "eleventy"
+  },
+  "author": "",
+  "description": ""
+}

@@ -1,0 +1,16 @@
+[build]
+  publish = "_site"
+  command = "eleventy"
+
+[[headers]]
+  for = "assets/images/*"
+  [headers.values]
+    Cache-Control = "public, s-max-age=31557600"
+[[headers]]
+  for = "assets/css/*.css"
+  [headers.values]
+    Cache-Control = "public, s-max-age=31557600"
+[[headers]]
+  for = "assets/js/*.js"
+  [headers.values]
+    Cache-Control = "public, s-max-age=31557600"
