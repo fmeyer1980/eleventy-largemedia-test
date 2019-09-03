@@ -3,6 +3,13 @@ layout: "layouts/default.njk"
 hej: "Frontpage"
 ---
 <section class="hero">
+    <img srcset="/assets/cases-home-1.jpg?nf_resize=fit&w=320 320w,
+             /assets/cases-home-1.jpg?nf_resize=fit&w=480 480w,
+             /assets/cases-home-1.jpg?nf_resize=fit&w=800 800w"
+      sizes="(max-width: 320px) 280px,
+             (max-width: 480px) 440px,
+             800px"
+        src="/assets/cases-home-1.jpg?nf_resize=fit&w=800" alt="Elva dressed as a fairy">
         <div class="hero__top">
             <div class="container container--right">
                 <div class="hero__top__content">
