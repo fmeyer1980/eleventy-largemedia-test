@@ -3,14 +3,30 @@
   command = "eleventy"
 
 [[headers]]
-  for = "/assets/images/*"
+  for = "assets/images/*.jpg"
   [headers.values]
     Cache-Control = "public, max-age=604800"
 [[headers]]
-  for = "/assets/css/*.css"
+  for = "assets/images/*.webp"
   [headers.values]
     Cache-Control = "public, max-age=604800"
 [[headers]]
-  for = "/assets/js/*.js"
+  for = "assets/images/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+[[headers]]
+  for = "assets/images/*.mp4"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+[[headers]]
+  for = "assets/images/*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+[[headers]]
+  for = "assets/css/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+[[headers]]
+  for = "assets/js/*.js"
   [headers.values]
     Cache-Control = "public, max-age=604800"
