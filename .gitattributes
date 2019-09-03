@@ -1,1 +1,4 @@
-assets/images/cases-home-1.jpg filter=lfs diff=lfs merge=lfs -text
+assets/images/*.jpg filter=lfs diff=lfs merge=lfs -text
+assets/images/*.png filter=lfs diff=lfs merge=lfs -text
+assets/images/*.webp filter=lfs diff=lfs merge=lfs -text
+assets/images/*.mp4 filter=lfs diff=lfs merge=lfs -text
