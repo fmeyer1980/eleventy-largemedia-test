@@ -1,6 +1,11 @@
 [build]
   publish = "_site"
-  command = "eleventy"
+  command = "yarn run build"
+  NODE_ENV = "10.15.3"
+
+[dev]
+  command = "yarn run start"
+
 
 [[headers]]
   for = "assets/images/*.jpg"

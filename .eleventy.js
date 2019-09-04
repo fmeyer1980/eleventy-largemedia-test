@@ -1,4 +1,8 @@
 module.exports = function(config) {
+
+    // Layout aliases can make templates more portable
+    config.addLayoutAlias('default', 'layouts/default.njk');
+
     config.addPassthroughCopy("assets/images");
 
     // minify the html output when building for realz
