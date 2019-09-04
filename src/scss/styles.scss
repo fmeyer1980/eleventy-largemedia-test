@@ -1,16 +1,16 @@
-@import "ui/var";
-@import "ui/breakpoints";
-@import "ui/mixins";
-@import "ui/color";
-@import "ui/type";
-@import "ui/spacing";
-@import "ui/btn";
-@import "ui/keyframes";
+@import "_ui/var";
+@import "_ui/breakpoints";
+@import "_ui/mixins";
+@import "_ui/color";
+@import "_ui/type";
+@import "_ui/spacing";
+@import "_ui/btn";
+@import "_ui/keyframes";
 
-@import "components/header";
-@import "components/hero";
-@import "components/about";
-@import "components/service";
+@import "_components/header";
+@import "_components/hero";
+@import "_components/about";
+@import "_components/service";
 
 $min_width: 320px;
 $max_width: 1400px;

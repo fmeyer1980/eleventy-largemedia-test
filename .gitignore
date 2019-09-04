@@ -1,5 +1,8 @@
-node_modules/
+node_modules
 _site/
+src/site/_includes/css
+src/site/_includes/js
+yarn-error.log
 
 # Local Netlify folder
 .netlify

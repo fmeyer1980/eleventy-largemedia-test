@@ -1,20 +1,26 @@
 {
   "name": "secret-sin-ny",
   "version": "1.0.0",
+  "author": "",
+  "description": "",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "start": "yarn run dev",
+    "dev": "gulp dev & ELEVENTY_ENV=dev eleventy --serve",
+    "build": "gulp build & ELEVENTY_ENV=prod eleventy"
+  },
   "dependencies": {
     "@11ty/eleventy": "^0.8.3",
     "node-sass": "^4.12.0",
     "swup": "^2.0.5",
-    "typeface-roboto": "^0.0.54"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "compile:sass": "node-sass assets/sass/styles.scss assets/css/styles.css -w",
-    "start": "eleventy --serve --watch",
-    "build": "eleventy"
-  },
-  "author": "",
-  "description": ""
+    "typeface-roboto": "^0.0.54",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.1",
+    "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify-es": "^1.0.4",
+    "html-minifier": "^3.5.21",
+    "require-dir": "^1.2.0"
+  }
 }
