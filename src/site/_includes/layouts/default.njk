@@ -15,40 +15,11 @@
             {% block postContent%}
             {% endblock postContent%}
         </div>
+
         <script>
-            function lazyLoad(elements) {
-
-    elements.forEach(picture => {
-      if (picture.intersectionRatio > 0) {
-  
-        // gather all the image and source elements in this picture
-        var sources = picture.children;
-  
-        for (var s = 0; s < sources.length; s++) {
-          var source = sources[s];
-  
-          // set a new srcset on the source elements 
-          if (sources.hasAttribute("srcset")) {
-            source.setAttribute("srcset", ONE_OF_OUR_BIGGER_IMAGES);
-          }
-          // or a new src on the img element
-          else {
-            source.setAttribute("src", ONE_OF_OUR_BIGGER_IMAGES);
-          }
-        }
-  
-        // stop observing this element. Our work here is done!
-        observer.unobserve(item.target);
-        
-      };
-      
-    });
-
-    
-  
-  };
-
-
+            {% include "js/scripts.js" %}
+            AOS.init();
+            const swup = new Swup();
         </script>
     </body>
 </html>
