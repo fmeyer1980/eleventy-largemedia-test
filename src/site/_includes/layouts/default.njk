@@ -4,6 +4,7 @@
         <title>Title of the document</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <meta name="description" content="This is an example of a meta description. This will often show up in search results.">
+        <style>{% include "css/styles.css" %}</style>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     </head>
     
@@ -19,6 +20,10 @@
         </div>
 
 
-
+        <script>
+            {% include "js/scripts.js" %}
+            AOS.init();
+            const swup = new Swup();
+        </script>
     </body>
 </html>
