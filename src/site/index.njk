@@ -3,8 +3,8 @@ layout: "layouts/default.njk"
 hej: "Frontpage"
 ---
 <section class="hero">
-<img srcset="/assets/images/cases-home-1.jpg?nf_resize=fit&w=320 320w,/assets/images/cases-home-1.jpg?nf_resize=fit&w=480 480w,/assets/images/cases-home-1.jpg?nf_resize=fit&w=800 800w" sizes="(max-width: 320px) 280px,(max-width: 480px) 440px, 800px"
-        src="/assets/images/cases-home-1.jpg?nf_resize=fit&w=800" alt="Elva dressed as a fairy">
+{# <img class="lazy lazy-initial" srcset="/assets/images/cases-home-1.jpg?nf_resize=fit&w=320 320w,/assets/images/cases-home-1.jpg?nf_resize=fit&w=480 480w,/assets/images/cases-home-1.jpg?nf_resize=fit&w=800 800w" sizes="(max-width: 320px) 280px,(max-width: 480px) 440px, 800px"
+        src="/assets/images/cases-home-1.jpg?nf_resize=fit&w=20" alt="Elva dressed as a fairy"> #}
 
         {# <picture>
             <source srcset="/assets/images/cases-home-1.jpg?nf_resize=fit&w=320 320w" type="image/webp">
@@ -12,11 +12,11 @@ hej: "Frontpage"
             <img loading="lazy" class="image" src="/assets/images/cases-home-4.jpg" alt="Alt Text!">
         </picture>#}
 
-        {# <picture class="lazy lazy-initial">
-            <source srcset="/images/tiny/lighthouse.jpg" media="(min-width: 1200px)">
-            <source srcset="/images/tiny/lighthouse.jpg" media="(min-width: 740px)">
-            <img src="/images/tiny/lighthouse.jpg" alt="A snazzy lighthouse" />
-        </picture>  #}
+        <picture class="lazy lazy-initial">
+            <source srcset="/assets/images/cases-home-1.jpg?nf_resize=fit&w=1200 1200w" media="(min-width: 1200px)">
+            <source srcset="/assets/images/cases-home-1.jpg?nf_resize=fit&w=500 500w" media="(min-width: 740px)">
+            <img src="/assets/images/cases-home-1.jpg?nf_resize=fit&w=20" alt="A snazzy lighthouse" />
+        </picture> 
 
         <div class="hero__top">
             <div class="container container--right">
