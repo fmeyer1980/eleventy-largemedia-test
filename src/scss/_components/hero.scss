@@ -79,7 +79,7 @@ $video-offset: 35rem;
             left: 0;
             width: 100%;
             height: calc(100% - #{$video-offset});
-            background-image: url('/assets/images/hero-bg.webp');
+            // background-image: url('/assets/images/hero-bg.webp');
             background-position: top center;
             background-size: cover;
             animation: FadeInLight .3s ease-in;
