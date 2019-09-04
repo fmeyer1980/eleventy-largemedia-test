@@ -15,11 +15,8 @@
             {% block postContent%}
             {% endblock postContent%}
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/lozad"></script>
         <script>
             {% include "js/scripts.js" %}
-            const observer = lozad(); // lazy loads elements with default selector as ".lozad"
-            observer.observe();
             AOS.init();
             const swup = new Swup();
         </script>

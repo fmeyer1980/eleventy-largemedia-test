@@ -12,7 +12,12 @@ hej: "Frontpage"
             <img loading="lazy" class="image" src="/assets/images/cases-home-4.jpg" alt="Alt Text!">
         </picture>#}
 
-        
+        <picture class="lazy">
+            <source srcset="/assets/images/cases-home-1.jpg?nf_resize=fit&w=1200" media="(min-width: 1200px)">
+            <source srcset="/assets/images/cases-home-1.jpg?nf_resize=fit&w=700" media="(min-width: 700px)">
+            <source srcset="/assets/images/cases-home-1.jpg?nf_resize=fit&w=300" media="(min-width: 300px)">
+            <img src="/assets/images/cases-home-1.jpg?nf_resize=fit&w=20" alt="snazzy cake" />
+        </picture>
 
         <div class="hero__top">
             <div class="container container--right">
@@ -69,6 +74,9 @@ hej: "Frontpage"
         <p class="text">Med en bred og årelang erfaring indenfor webbranchen er vi et solidt match når du søger efter et webbureau til at håndtere dine programmerings opgaver. Vi er et webbureau med fokus på kvalitet og kundens løsninger. Vores tekniske kunnen matcher vores evne til at levere. Der arbejdes fokuseret indtil kundens behov er i hus.</p>
     </section>
 
+
+        
+
         {# <picture loading="lazzy">
             <source srcset="/assets/images/cases-home-1.jpg?nf_resize=fit&w=320" media="(max-width: 320px)">
             <source srcset="/assets/images/cases-home-1.jpg?nf_resize=fit&w=500" media="(max-width: 740px)">
@@ -89,8 +97,6 @@ hej: "Frontpage"
             <img src="/assets/images/cases-home-1.jpg?nf_resize=fit&w=300"
             alt="The Speed of Light and the Timing of Eclipses" />
         </picture> #}
-    <img class="lozad" data-src="/assets/images/cases-home-1.jpg?nf_resize=fit&w=320 320w,/assets/images/cases-home-1.jpg?nf_resize=fit&w=480 480w,/assets/images/cases-home-1.jpg?nf_resize=fit&w=800 800w" sizes="(max-width: 320px) 280px,(max-width: 480px) 440px, 800px"
-        src="/assets/images/cases-home-1.jpg?nf_resize=fit&w=1000">
     <div class="service--home">
         <div class="container container--right">
             <g-link class="item" data-aos="case-animation" data-aos-once="true" aria-label="API udvikling og integration" to="/">
@@ -99,7 +105,7 @@ hej: "Frontpage"
                     
 
 
-                    <picture loading="lazy">
+                    <picture>
                         <source srcset="/assets/images/service-1.jpg?nf_resize=fit&w=320" media="(max-width: 320px)">
                         <img class="image" src="/assets/images/service-1.jpg?nf_resize=fit&w=500" alt="A snazzy lighthouse" />
                     </picture> 
@@ -158,3 +164,5 @@ hej: "Frontpage"
                 <source srcset="/assets/images/cases-home-2.jpg" type="image/jpeg"> 
                 <img loading="lazy" class="image" src="/assets/images/cases-home-2.jpg" alt="Alt Text!">
             </picture> -->
+
+        
