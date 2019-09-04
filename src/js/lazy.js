@@ -11,15 +11,15 @@ function updateAttributeURL(element, attr, swapOut, swapIn) {
 function loadImage(picture) {
 
   var sources = picture.children;
-  var loadingPath = "images/tiny";
+  var loadingPath = "assets/images/tiny";
   var sizes = ["large","medium","small"];
 
   for(var s=0; s<sources.length; s++) {
     // update the src or srcset urls
     if (sources[s].hasAttribute("srcset")) {
-      updateAttributeURL(sources[s], "srcset", loadingPath, "images/"+sizes[s] );
+      updateAttributeURL(sources[s], "srcset", loadingPath, "assets/images/"+sizes[s] );
     } else {
-      updateAttributeURL(sources[s], "src", loadingPath, "images/"+sizes[s] );
+      updateAttributeURL(sources[s], "src", loadingPath, "assets/images/"+sizes[s] );
     }
 
     // remove the lazy-initial class when the full image is loaded to unblur
