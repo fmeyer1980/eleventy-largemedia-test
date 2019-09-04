@@ -198,3 +198,14 @@ html.is-leaving.is-animating .transition-fade{
   transition-delay: .4s;
   opacity: 0;
 }
+
+
+[data-aos="fade-inn"] {
+  opacity: 0;
+  transition: 1s ease;
+
+  &.aos-animate {
+    opacity: 1;
+  }
+
+}
