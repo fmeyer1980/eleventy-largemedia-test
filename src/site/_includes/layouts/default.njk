@@ -4,7 +4,7 @@
         <title>Title of the document</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <meta name="description" content="This is an example of a meta description. This will often show up in search results.">
-        <style>{% include "css/styles.css" %}</style>
+        {# <style>{% include "css/styles.css" %}</style> #}
     </head>
     <body>
     {% include "components/header.njk" %}
@@ -16,10 +16,10 @@
             {% endblock postContent%}
         </div>
 
-        <script>
+        {# <script>
             {% include "js/scripts.js" %}
             AOS.init();
             const swup = new Swup();
-        </script>
+        </script> #}
     </body>
 </html>
