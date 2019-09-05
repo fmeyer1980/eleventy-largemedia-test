@@ -1,7 +1,7 @@
 ---
 layout: "layouts/default.njk"
 title: "Ydelser"
-tags: "services"
+tags: ""
 ---
 
 # Ydelser

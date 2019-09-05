@@ -2,167 +2,32 @@
 layout: "layouts/default.njk"
 hej: "Frontpage"
 ---
-<section class="hero">
-<img class="lazy lazy-initial" srcset="/assets/images/cases-home-1.jpg?nf_resize=fit&w=320 320w,/assets/images/cases-home-1.jpg?nf_resize=fit&w=480 480w,/assets/images/cases-home-1.jpg?nf_resize=fit&w=800 800w" sizes="(max-width: 320px) 280px,(max-width: 480px) 440px, 800px"
-        src="/assets/images/cases-home-1.jpg?nf_resize=fit&w=1000" alt="Elva dressed as a fairy">
 
-        {# <picture>
-            <source srcset="/assets/images/cases-home-1.jpg?nf_resize=fit&w=320 320w" type="image/webp">
-            <source srcset="/assets/images/cases-home-4.jpg" type="image/jpeg">
-            <img loading="lazy" class="image" src="/assets/images/cases-home-4.jpg" alt="Alt Text!">
-        </picture>#}
-
-        {# <picture class="lazy">
-            <source srcset="/assets/images/cases-home-1.jpg?nf_resize=fit&w=1200" media="(min-width: 1200px)">
-            <source srcset="/assets/images/cases-home-1.jpg?nf_resize=fit&w=700" media="(min-width: 700px)">
-            <source srcset="/assets/images/cases-home-1.jpg?nf_resize=fit&w=300" media="(min-width: 300px)">
-            <img src="/assets/images/cases-home-1.jpg?nf_resize=fit&w=20" alt="snazzy cake" />
-        </picture> #}
-
-        <div class="hero__top">
-            <div class="container container--right">
-                <div class="hero__top__content">
-                    <div class="text">
-                        <h1>
-                            <span class="heading">Digitale løsninger derr
-                                <span class="ani"></span>
-                            </span>
-                            <span class="heading">skaber resultater
-                                <span class="ani"></span>
-                            </span>
-                        </h1>
-                        <p>Webbureau Indexed hjælper med digitialisering af din virksomhed. <strong>Opdater eller byg ny hjemmeside eller webapp</strong> som kan automatisere dine processer.</p>
-                    </div>
+{% include "components/hero.njk" %}
+<section class="about">
+    <h2 class="heading mt-0">18 års erfaring</h2>
+    <p class="text">Med en bred og årelang erfaring indenfor webbranchen er vi et solidt match når du søger efter et webbureau til at håndtere dine programmerings opgaver. Vi er et webbureau med fokus på kvalitet og kundens løsninger. Vores tekniske kunnen matcher vores evne til at levere. Der arbejdes fokuseret indtil kundens behov er i hus.</p>
+</section>
+<div class="service--home">
+    <div class="container container--right">
+        {% for service in collections.services %}
+        <a class="item" data-aos="case-animation" data-aos-once="true" aria-label="{{service.data.title}}" href="{{ service.url }}">
+            <div class="image-container">
+                <div class="img-wrapper">
+                <picture>
+                    <source srcset="{{service.data.image}}?nf_resize=fit&w=320" media="(max-width: 320px)">
+                    <img class="image" src="{{service.data.image}}?nf_resize=fit&w=500" alt="{{ service.data.title }}" />
+                </picture> 
                 </div>
+                <div class="overlay"></div> 
             </div>
-            {# <div class="video-wrapper">
-                <video muted="muted" autoplay loop="loop" playsinline="" preload="auto" class="imagebox__video">
-                    <source src="/assets/images/video.mp4" type="video/mp4">
-                </video>
-            </div> #}
-        </div>
-        <div class="hero__bottom">
-           
-            
-            <ul class="icons-wrapper">
-                <!-- <li>
-                        <img 
-                        src="/assets/images/cases-home-1.jpg?nf_resize=fit&w=300&h=400"
-                        alt="Screenshots of CSS-Tricks and CodePen homepages"
-                      />
-                </li> -->
-                <li>
-                    <img loading="lazy" src="/assets/images/woocommerce-icon.png" alt="">
-                </li>
-                <li>
-                    <img loading="lazy" src="/assets/images/wordpress-icon.png" alt="">
-                </li>
-                <li>
-                    <img loading="lazy" src="/assets/images/strip-icon.png" alt="">
-                </li>
-                <li>
-                    <img loading="lazy" src="/assets/images/economic-icon.png" alt="">
-                </li>
-                <li>
-                    <img loading="lazy" src="/assets/images/symfony-icon.png" alt="">
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section class="about" data-aos="fade-inn" data-aos-once="true">
-        <h2 class="heading mt-0">18 års erfaring</h2>
-        <p class="text">Med en bred og årelang erfaring indenfor webbranchen er vi et solidt match når du søger efter et webbureau til at håndtere dine programmerings opgaver. Vi er et webbureau med fokus på kvalitet og kundens løsninger. Vores tekniske kunnen matcher vores evne til at levere. Der arbejdes fokuseret indtil kundens behov er i hus.</p>
-    </section>
-
-
-        
-
-        {# <picture loading="lazzy">
-            <source srcset="/assets/images/cases-home-1.jpg?nf_resize=fit&w=320" media="(max-width: 320px)">
-            <source srcset="/assets/images/cases-home-1.jpg?nf_resize=fit&w=500" media="(max-width: 740px)">
-            <img src="/assets/images/cases-home-1.jpg?nf_resize=fit&w=1000" alt="A snazzy lighthouse" />
-        </picture> 
-         <picture>
-            <source type="image/webp"
-                    srcset="/assets/images/cases-home-1.webp?nf_resize=fit&w=300 300w,
-                            /assets/images/cases-home-1.webp?nf_resize=fit&w=600 600w,
-                            /assets/images/cases-home-1.webp?nf_resize=fit&w=1000 1000w"
-                            sizes="(max-width: 320px) 300px,(max-width: 480px) 440px, 800px"
-                    />
-            <source srcset="/assets/images/cases-home-1.jpg?nf_resize=fit&w=300 300w,
-                            /assets/images/cases-home-1.jpg?nf_resize=fit&w=600 600w,
-                            /assets/images/cases-home-1.jpg?nf_resize=fit&w=1000 1000w"
-                            sizes="(max-width: 320px) 300px,(max-width: 480px) 440px, 800px"
-                    />
-            <img src="/assets/images/cases-home-1.jpg?nf_resize=fit&w=300"
-            alt="The Speed of Light and the Timing of Eclipses" />
-        </picture> #}
-    <div class="service--home">
-        <div class="container container--right">
-            <g-link class="item" data-aos="case-animation" data-aos-once="true" aria-label="API udvikling og integration" to="/">
-                <div class="image-container">
-                    <div class="img-wrapper">
-                    
-
-
-                    <picture>
-                        <source srcset="/assets/images/service-1.jpg?nf_resize=fit&w=320" media="(max-width: 320px)">
-                        <img class="image" src="/assets/images/service-1.jpg?nf_resize=fit&w=500" alt="A snazzy lighthouse" />
-                    </picture> 
-                        {# <picture>
-                            <source srcset="/assets/images/service-1.webp" type="image/webp">
-                            <source srcset="/assets/images/service-1.jpg" type="image/jpeg"> 
-                            <img loading="lazy" class="image" src="/assets/images/service-1.jpg" alt="Alt Text!">
-                        </picture> #}
-                    </div>
-                    <div class="overlay"></div> 
-                </div>
-                <div class="content" data-aos="case-text-ani" data-aos-once="true">
-                    <h3 class="heading">API udvikling og integration</h3>
-                    <p class="text">Et af vores kerneområder er at tilbyde værdiskabende løsninger. Det kunne blandt andet være automatisk bogføring af webordrer…</p>
-                </div>
-            </g-link>
-            <g-link data-aos="case-animation" data-aos-once="true" class="item" aria-label="WordPress udvikling" to="/">
-                <div class="image-container">
-                    <div class="img-wrapper">
-                        <picture loading="lazy">
-                            <source srcset="/assets/images/service-2.jpg?nf_resize=fit&w=320" media="(max-width: 320px)">
-                            <img class="image" src="/assets/images/service-2.jpg?nf_resize=fit&w=500" alt="A snazzy lighthouse" />
-                        </picture> 
-                    </div>
-                    <div class="overlay"></div>   
-                </div>
-                <div class="content" data-aos="case-text-ani" data-aos-once="true">
-                    <h3 class="heading">WordPress udvikling</h3>
-                    <p class="text">En anden benyttet ydelse finder man indenfor WordPress. Vi kan klare alle opgaver uanset størrelse, når det kommer til WordPress…</p>
-                </div>
-            </g-link>
-            <g-link data-aos="case-animation" data-aos-once="true" class="item" aria-label="Webshop- og e-handelsløsninger" to="/">
-                <div class="image-container">
-                    <div class="img-wrapper">
-                        <picture loading="lazy">
-                            <source srcset="/assets/images/service-3.jpg?nf_resize=fit&w=320" media="(max-width: 320px)">
-                            <img class="image" src="/assets/images/service-3.jpg?nf_resize=fit&w=500" alt="A snazzy lighthouse" />
-                        </picture> 
-                    </div>
-                    <div class="overlay"></div>   
-                </div>
-                <div class="content" data-aos="case-text-ani" data-aos-once="true">
-                    <h3 class="heading">Webshop- og e-handelsløsninger</h3>
-                    <p class="text">Skal du have udviklet en e-handelsløsning, er vi det sikre valg. Vi har stor erfaring med både WooCommerce, PrestaShop, Magento…</p>
-                </div>
-            </g-link>
-        </div>
+            <div class="content" data-aos="case-text-ani" data-aos-once="true">
+                <h3 class="heading">{{ service.data.title }}</h3>
+                <p class="text">{{ service.data.subtext }}</p>
+            </div>
+        </a>
+        {% endfor %}
     </div>
-    <!-- <picture>
-            <source srcset="/assets/images/cases-home-4.webp" type="image/webp">
-            <source srcset="/assets/images/cases-home-4.jpg" type="image/jpeg">
-            <img loading="lazy" class="image" src="/assets/images/cases-home-4.jpg" alt="Alt Text!">
-        </picture>
-        <picture>
-                <source srcset="/assets/images/cases-home-2.webp" type="image/webp">
-                <source srcset="/assets/images/cases-home-2.jpg" type="image/jpeg"> 
-                <img loading="lazy" class="image" src="/assets/images/cases-home-2.jpg" alt="Alt Text!">
-            </picture> -->
+</div>
 
         
