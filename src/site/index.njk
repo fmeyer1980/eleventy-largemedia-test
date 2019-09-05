@@ -14,7 +14,7 @@ hej: "Frontpage"
         <a class="item" data-aos="case-animation" data-aos-once="true" aria-label="{{service.data.title}}" href="{{ service.url }}">
             <div class="image-container">
                 <div class="img-wrapper">
-                <picture>
+                <picture loading="lazy">
                     <source srcset="{{service.data.image}}?nf_resize=fit&w=320" media="(max-width: 320px)">
                     <img class="image" src="{{service.data.image}}?nf_resize=fit&w=500" alt="{{ service.data.title }}" />
                 </picture> 
