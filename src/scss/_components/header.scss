@@ -92,7 +92,7 @@
             ul{
               @include list-style-none;
               position: absolute;
-              display: none;
+              // display: none;
               top: 1rem;
             }
           }

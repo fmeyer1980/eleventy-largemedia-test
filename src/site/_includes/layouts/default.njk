@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="da">
+<html lang="da" data-wf-page="5d2a3ce59ea87f9c920900ad" data-wf-site="5d2a3ce59ea87f64200900ac">
     <head>
         <title>Title of the document</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
@@ -7,19 +7,23 @@
         <style>{% include "css/styles.css" %}</style>
     </head>
     <body>
+    
     {% include "components/header.njk" %}
-
+  
         <div class="page-overlay"></div>
         <div id="swup" class="transition-fade">
             {{ content | safe }}
             {% block postContent%}
             {% endblock postContent%}
         </div>
-
+        <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <script>
             {% include "js/scripts.js" %}
-            AOS.init();
             const swup = new Swup();
+            swup.cache.getCurrentPage();
+            AOS.init();
+            
+            
         </script>
     </body>
 </html>

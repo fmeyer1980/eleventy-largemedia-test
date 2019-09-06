@@ -7,14 +7,18 @@
       <nav>
         <ul class="main-menu">
           <li><a class="active" href="/">Forside</a></li>
-          <li><a href="/service/test">Cases</a></li>
+          <li><a href="/cases">Cases</a></li>
           <li>
             <a href="/service">Ydelser
               <!-- <font-awesome class="icon" :icon="['fas', 'angle-down']"/> -->
             </a>
-            <ul><li><a href="/service/webshop"></a></li></ul>
+            <ul>
+                <!-- {%- for service in collections.services -%}
+                  <li> <a href="{{ service.url }}">{{ service.data.title }}</a></li>
+                {%- endfor -%} -->
+              </ul>
           <li>
-            <a href="/service/webshop">Om indexed
+            <a href="/about">Om indexed
               <!-- <font-awesome class="icon" :icon="['fas', 'angle-down']"/> -->
             </a>
           </li>
@@ -24,6 +28,5 @@
         <a class="phone" href="" aria-label="Ring til os">23 45 87 88</a>
         <a class="phone" href="" aria-label="Kontakt os på mail">info@indexed.dk</a>
       </div>
-      
     </div>
 </header>
