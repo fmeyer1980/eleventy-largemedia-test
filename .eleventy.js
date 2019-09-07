@@ -4,6 +4,7 @@ module.exports = function(config) {
     config.addLayoutAlias('default', 'layouts/default.njk');
 
     config.addPassthroughCopy("assets/images");
+    config.addPassthroughCopy("assets/js");
 
     // minify the html output when building for realz
     if(process.env.ELEVENTY_ENV == 'prod') {

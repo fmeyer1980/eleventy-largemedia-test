@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="da" data-wf-page="5d2a3ce59ea87f9c920900ad" data-wf-site="5d2a3ce59ea87f64200900ac">
+<html lang="da">
     <head>
         <title>Title of the document</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <meta name="description" content="This is an example of a meta description. This will often show up in search results.">
-        <style>{% include "css/styles.css" %}</style>
+        <style>{% include "css/styles.css" %}{% include "css/owl.carousel.min.css" %}</style>
     </head>
     <body>
     
@@ -16,10 +16,13 @@
             {% block postContent%}
             {% endblock postContent%}
         </div>
-        <script>
+        <script src="/assets/js/jquery.min.js"></script>
+        <script src="/assets/js/swup.js"></script>
+        <script src="/assets/js/aos.js"></script>
+        <script src="/assets/js/owl.carousel.min.js"></script>
+        <script src="/assets/js/scripts.js"></script>
+        {# <script >
             {% include "js/scripts.js" %}
-            const swup = new Swup();
-            AOS.init();
-        </script>
+        </script> #}
     </body>
 </html>

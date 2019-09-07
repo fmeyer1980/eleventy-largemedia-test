@@ -1,0 +1,87 @@
+.service-bottom-home{
+    width: 100%;
+    padding-right: var(--container-padding);
+    background-color: $primary-light;
+
+    .content{
+        position: relative;
+        margin-top: -35rem;
+        background-color: $light-gray-dark;
+        padding: 10rem 10rem 10rem var(--container-padding);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        z-index: 1;
+        grid-gap: 8rem;
+        /* grid-gap: $gutter * 2; */
+
+        h5{
+            grid-column: 1 / 4;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .item{
+            /* padding: 4rem; */
+            position: relative;
+            &:after{
+                content: "";
+                height: 100%;
+                width: 1px;
+                background-color: rgba($black, .06);
+                position: absolute;
+                top: 50%;
+                right: -4rem;
+                transform: translateY(-50%);
+            }
+            &:nth-child(4), &:nth-child(7){
+                &:after{
+                    display: none;
+                }
+            }
+            &:before{
+                content: "";
+                height: 1px;
+                width: 100%;
+                background-color: rgba($black, .06);
+                position: absolute;
+                top: -4rem;
+                right: 50%;
+                transform: translateX(50%);
+            }
+
+            &:nth-child(-n+4){
+                &:before{
+                    display: none;
+                }
+            }
+
+            
+            /* &:nth-child(even){
+                background-color: darken($light-gray-dark, 3%);
+            } */
+            
+            .top{
+                display: flex;
+                align-items: center;
+                margin-bottom: 1rem;
+                .icon{
+                width: 2.2rem;
+                height: auto;
+                   margin-right: 1rem;
+                }
+                h3{
+                    margin: 0;
+                    flex-grow: 1;
+                }
+            }
+
+            p{
+                margin: 0;
+                opacity: .7;
+            }
+
+        }
+
+
+    }
+}
