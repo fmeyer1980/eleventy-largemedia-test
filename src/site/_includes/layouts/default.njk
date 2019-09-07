@@ -11,19 +11,15 @@
     {% include "components/header.njk" %}
   
         <div class="page-overlay"></div>
-        <div class="transition-fade">
+        <div id="swup" class="transition-fade">
             {{ content | safe }}
             {% block postContent%}
             {% endblock postContent%}
         </div>
-        {# <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> #}
         <script>
             {% include "js/scripts.js" %}
-            {# const swup = new Swup();
-            swup.cache.getCurrentPage(); #}
+            const swup = new Swup();
             AOS.init();
-            
-            
         </script>
     </body>
 </html>
