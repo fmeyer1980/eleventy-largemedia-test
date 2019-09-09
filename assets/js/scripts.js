@@ -1,12 +1,4 @@
-$('.owl-carousel').owlCarousel({
-    loop:false,
-    margin:30,
-    nav:false,
-    dots:true,
-    lazyLoad:true,
-    items:1,
-    lazyLoad: true
-})
+import Swup from 'swup';
 
-AOS.init();
+// enable swup
 const swup = new Swup();
