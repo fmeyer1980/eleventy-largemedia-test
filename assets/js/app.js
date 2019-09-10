@@ -1,5 +1,6 @@
 import Swup from 'swup';
 import SwupScrollPlugin from '@swup/scroll-plugin';
+import Glide from '@glidejs/glide'
 
 // enable swup
 const swup = new Swup({
@@ -13,5 +14,6 @@ const swup = new Swup({
     ]
     
   });
-  
+
+new Glide('.glide').mount()
 AOS.init();
