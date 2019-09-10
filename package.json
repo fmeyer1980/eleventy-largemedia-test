@@ -16,6 +16,7 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.1",
     "@glidejs/glide": "^3.3.0",
     "@swup/debug-plugin": "^1.0.2",
+    "@swup/preload-plugin": "^1.0.3",
     "@swup/scroll-plugin": "^1.0.6",
     "gulp": "^4.0.0",
     "gulp-concat": "^2.6.1",

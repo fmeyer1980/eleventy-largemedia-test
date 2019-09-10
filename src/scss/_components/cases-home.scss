@@ -1,14 +1,10 @@
-.cases-home{
+.glide{
     background-color: #4F4339;
     color: $light-gray-light;
     position: relative;
 
-    &.owl-carousel{
+    .glide__track, .glide__slides{
         height: 100%;
-
-        .owl-stage-outer, .owl-stage{
-            height: 100%;
-        }
     }
 
     // .owl-nav{
@@ -19,39 +15,40 @@
     //     width: 100% !important;
     // }
 
-    .owl-dots{
-        position: absolute !important;
-        width: auto;
-        margin-right: 0;
-        right: var(--container-padding);
-        bottom: 42rem;
-        text-align: right;
+    // .owl-dots{
+    //     position: absolute !important;
+    //     width: auto;
+    //     margin-right: 0;
+    //     right: var(--container-padding);
+    //     bottom: 42rem;
+    //     text-align: right;
 
-        .owl-dot{
-            width: 14rem !important;
-            height: 6px !important;
-            -webkit-border-radius: 1px !important;
-            -moz-border-radius: 1px !important;
-            border-radius: 1px !important;
-            background-color: $light-gray-dark !important;
-            opacity: .2;
-            padding: 0 0 0 15px !important;
-        }
+    //     .owl-dot{
+    //         width: 14rem !important;
+    //         height: 6px !important;
+    //         -webkit-border-radius: 1px !important;
+    //         -moz-border-radius: 1px !important;
+    //         border-radius: 1px !important;
+    //         background-color: $light-gray-dark !important;
+    //         opacity: .2;
+    //         padding: 0 0 0 15px !important;
+    //     }
         
-        .owl-dot.active{
-            opacity: 1;
-        }
-    }
+    //     .owl-dot.active{
+    //         opacity: 1;
+    //     }
+    // }
 
-    .owl-item{
+    .glide__slides{
         position: relative;
         width: 100%;
         height: 130rem;
 
-        &.active{
+        .glide__slide{
+            position: relative;
 
+            &.glide__slide--active.aos-animate{
 
-            .aos-animate{
 
                 .image{
                     opacity: 1 !important;
@@ -59,6 +56,7 @@
                 }
     
                 .content{
+
                     .heading{
                         animation: FadeFromRight .3s;
                         animation-fill-mode: backwards;
@@ -81,38 +79,7 @@
                     }
                 }
             }
-            }
 
-        
-            /* &:after{
-                content: "";
-                width: 100%;
-                height: 100%;
-                background-color: #4F4339;
-                position: absolute;
-                top: 0;
-                left: 0;
-                z-index: 1;
-                opacity: 1;
-                mix-blend-mode: multiply;
-            }
-
-            &:before{
-                content: "";
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                top: 0;
-                left: 0;
-                opacity: 1;
-                z-index: 2;
-                background-image: linear-gradient(to right, rgba($dark-gray-light, .8), rgba($dark-gray-light, 0));
-            } */
-
-        .item{
-            width: 100%;
-            height: 100%;
-            
             .image{
                 position: absolute;
                 top: 0;
@@ -122,7 +89,7 @@
                 opacity: 0;
                 object-fit: cover;
                 transition: all .3s ease-in-out;
-    
+
             }
     
     
@@ -134,46 +101,44 @@
                 width: 50%;
                 z-index: 30;
                 font-weight: 300;
-    
+
                 .heading{
                     font-size: 9rem;
                     margin: 0;
                     line-height: 100%;
                     opacity: 0;
                 }
-    
+
                 .subheader{
                     text-transform: uppercase;
                     opacity: .7;
                     font-size: 2rem;
                     opacity: 0;
                 }
-    
+
                 .main-text{
                     opacity: 0;
-    
+
                     .devider{
                         height: 1px;
                         width: 60%;
                         background-color: rgba($white, .1);
                         margin-top: 3rem;
                     }
-    
+
                     .text{
                         font-size: 2.2rem;
                         margin-bottom: 5rem;
                         opacity: 1;
                     }
-    
+
                     a{
                         margin-right: 1.5rem;
                     }
                 }
-    
-            }
-        
-        }
 
- 
+            }
+
+        }
     }
 }
