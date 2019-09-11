@@ -188,7 +188,11 @@ a{
 .transition-fade{
   opacity: 1;
   transition: .01s;
-  
+}
+
+.transition-header{
+  opacity: 1;
+  transition: .01s;
 }
 
 html.is-leaving{
@@ -201,6 +205,19 @@ html.is-leaving.is-animating .transition-fade{
   transition-delay: .4s;
   opacity: 0;
 }
+
+// html.is-leaving.is-animating .transition-header{
+//   transition-delay: .1s;
+//   opacity: 0;
+// }
+
+
+// html.is-rendering.is-animating .transition-header{
+//   transition-delay: 1s;
+//   opacity: 0;
+// }
+
+
 
 
 [data-aos="fade-inn"] {

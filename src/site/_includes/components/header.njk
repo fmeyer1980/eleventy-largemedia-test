@@ -1,4 +1,5 @@
 <header class="header">
+    <!-- <div id="swup" class="transition-header"> -->
     <div class="container">
       <div class="logo">
         <a href="/" aria-label="Indexed"><img src="/assets/images/indexed-logo.svg" alt="Indexed" /></a>
@@ -6,18 +7,13 @@
       
       <nav>
         <ul class="main-menu">
-          <li><a class="active" href="/">Forside</a></li>
-          <li><a href="/cases">Cases</a></li>
-          <li>
-            <a href="/services">Ydelser
-              <!-- <font-awesome class="icon" :icon="['fas', 'angle-down']"/> -->
-            </a>
-            
-          <li>
-            <a href="/about">Om indexed
-              <!-- <font-awesome class="icon" :icon="['fas', 'angle-down']"/> -->
-            </a>
-          </li>
+            {% for pages in collections.first %}
+            <li>
+                <a {% if page.url == pages.url %} class="active"{% endif %} href="{{ pages.url }}">
+                    {{ pages.data.title }}
+                </a>
+            </li>
+        {% endfor %}
         </ul>
       </nav>
       <div class="contact-info">
@@ -25,4 +21,5 @@
         <a class="phone" href="" aria-label="Kontakt os på mail">info@indexed.dk</a>
       </div>
     </div>
+  <!-- </div> -->
 </header>
