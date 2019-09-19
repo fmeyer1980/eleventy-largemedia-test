@@ -4,7 +4,7 @@
         <a class="item" data-aos="case-animation" data-aos-once="true" aria-label="{{service.data.title}}" href="{{ service.url }}">
             <div class="image-container">
                 <div class="img-wrapper">
-                <picture loading="lazy">
+                <picture>
                     <source srcset="{{service.data.image}}?nf_resize=fit&w=320" media="(max-width: 375px)">
                     <img class="image" src="{{service.data.image}}?nf_resize=fit&w=440" alt="{{ service.data.title }}" />
                 </picture> 
@@ -19,17 +19,3 @@
         {% endfor %}
     </div>
 </div>
-
-
-{# <a class="item" data-aos="case-animation" data-aos-once="true" href="/cases/toftild">
-    <div class="image-container" @click="selected = 1" :class="{active:selected == 1}">
-        <div class="img-wrapper">
-            <img class="image" src="@/assets/images/case1.jpg" alt=""/>
-        </div>
-        <div class="overlay toftild"></div>   
-    </div>
-    <div class="content" data-aos="case-text-ani" data-aos-once="true">
-        <span class="sub-heading">Website & webshop</span>
-        <h3 class="heading h3">Toftild</h3>
-    </div>
-</a> #}

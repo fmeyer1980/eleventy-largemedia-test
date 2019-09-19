@@ -20,6 +20,15 @@ const swup = new Swup({
     
 });
 
+swup.cache.cacheUrl({
+    title: 'Page title',    
+    pageClass: 'body-class',
+    originalContent: 'html content of page',
+    blocks: ['<div id="swup"></div>'], 
+    responseURL: '/redirected-url'
+});
+
+
 new Glide('.glide').mount()
 AOS.init();
 
