@@ -1,5 +1,5 @@
-const localImages = require('eleventy-plugin-local-images');
-const lazyImages = require("eleventy-plugin-lazyimages");
+// const localImages = require('eleventy-plugin-local-images');
+// const lazyImages = require("eleventy-plugin-lazyimages");
 module.exports = function(config) {
 
     // Layout aliases can make templates more portable
@@ -7,16 +7,16 @@ module.exports = function(config) {
 
     config.addPassthroughCopy("assets/images");
     config.addPassthroughCopy("assets/js");
-    config.addPlugin(lazyImages, {
-        cacheFile: ""
-      });
-    config.addPlugin(localImages, {
-        distPath: "_site",
-        assetPath: "/assets/images",
-        selector: "img",
-        attribute: "data-src", // Lazy images attribute
-        verbose: false
-      });
+    // config.addPlugin(lazyImages, {
+    //     cacheFile: ""
+    //   });
+    // config.addPlugin(localImages, {
+    //     distPath: "_site",
+    //     assetPath: "/assets/images",
+    //     selector: "img",
+    //     attribute: "data-src", // Lazy images attribute
+    //     verbose: false
+    //   });
 
     // minify the html output when building for realz
     if(process.env.ELEVENTY_ENV == 'prod') {
