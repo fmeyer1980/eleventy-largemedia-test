@@ -7,6 +7,7 @@ import Glide from '@glidejs/glide';
 
 // enable swup
 const swup = new Swup({
+    cache: true,
     plugins: [
         new SwupScrollPlugin({
             doScrollingRightAway: false,
