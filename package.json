@@ -24,7 +24,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-uglify-es": "^1.0.4",
     "html-minifier": "^3.5.21",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "require-dir": "^1.2.0",
     "swup": "^2.0.5",
     "typeface-roboto": "^0.0.54",
